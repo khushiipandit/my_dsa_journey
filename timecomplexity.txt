@@ -1,0 +1,7 @@
+1. Time complexity : the amount of timt take as function of input size(n)
+bigO : worst case complexity
+theta : average case complexity
+omega : best case complexity
+O(1)<O(logn)<O(root n)<O(n)<O(nlogn)<O(n^2)<O(x^3)<O(2^x)<O(n!)  -------------best to worst--------------
+2. Space complexity : amount of space taken by an algo as function of input size(n), it is the auxiliary memory taken by the variables
+example for the squared array it takes bigO(n), while for the sum of array element it takes bigO(k)
