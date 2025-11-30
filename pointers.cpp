@@ -39,7 +39,7 @@ float* ptr_var = &var;
 float** ptr_ptr_var = &ptr_var;
 // cout<<ptr_ptr_var<<endl;
 // cout<<sizeof(ptr_ptr_var)<<endl;
-
+// =========================================DEREFERENCES=========================================================
 // Dereference of pointer : it is when the value at the poniter is returned done by" *(&variable)""
 
 // cout<<*(&var)<<endl; // 2 
@@ -65,14 +65,55 @@ float** ptr_ptr_var = &ptr_var;
 
 int b= 10;
 change2(b);
-cout<<"value in main function :"<<b<<endl;
+// cout<<"value in main function :"<<b<<endl;
+
+// ================================ ARRAY POINTER ================================================================
+
+int arr[] = {1,3,5,6};
+// arr ( the name of any array) contain the address of the first element of the array
+
+// cout<<arr<<endl; // address of arr[0] i.e 0x7ffe8fa1b7f0
+// cout<<*arr<<endl; // value at address arr[0] i,e 1
+// array pointers are always constant variables 
 
 
+/// ================= POINTER ARITHMETICS =========================================================================
+
+// Increment & Decrement operation ++ and -- adds/subtract an integer , i.e 4 bytesfrom the pointer
+int x=4;
+int y=5;
+int* ptrx = &a;
+// cout<<ptrx<<endl; // 0x7ffe99066218 => 18 -> 19 -> 1a -> 1b -> 1c
+// ptrx++; 
+// cout<<ptrx <<endl; // 0x7ffe9906621c => ic <- 1b <- 1a <- 19 <- 18
+// ptrx--;
+// cout<<ptrx<<endl;  // 0x7ffe99066218
 
 
+// subraction and addition 
 
+// ptrx = ptrx + 2; // 2 integers => 8 bytes 
+// cout<<ptrx<<endl; //  0x7fffb07b3320 added 8 bytes 
 
+// // so in our array 
+// cout<<arr<<endl; // arr[0]  => 1
+// cout<<*(arr+1)<<endl; //arr[1]  => 3
+// cout<<*(arr+2)<<endl; // arr[2] => 5
+// cout<<*(arr+3)<<endl;  // arr[3]  => 6
+// cout<<*(arr-1)<<endl;
 
+// the addition of two pointers is not allowed in c++ but the subraction is allowed if both pointers has same datatype
+int* point1= &x;
+int* point2 = point1+2;
+// cout<<point2-point1<<endl; // 2 => integers
+// comparision 
+int* pointerr1;
+int* pointerr2;
+cout<< pointerr1<<endl;
+cout<< pointerr2<<endl;
+cout<<(pointerr1<pointerr2)<<endl;
+cout<<(pointerr1>pointerr2)<<endl;
+cout<<(pointerr1 == pointerr2)<<endl;
 
     return 0;
 }
