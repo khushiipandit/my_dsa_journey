@@ -94,7 +94,10 @@ using namespace std;
 //         return ans;
 //     }
 // }
+// =============================================================================================================
 // majority element : most opptimized method using moore's voting algo
+// =============================================================================================================
+
 vector<int> major_el_moore(vector<int>& arr){
     int n = arr.size();
     int count=0;
@@ -124,7 +127,10 @@ vector<int> major_el_moore(vector<int>& arr){
     
 }
 
+// =============================================================================================================
 // compute x^n expression WITH LOG N COMPLEXITY
+// =============================================================================================================
+// leetcode problem no 50 : pow(x,n)==========================================================================
 double mypow(double x, int n){
     long binform = n;
     double ans = 1;
@@ -149,11 +155,51 @@ double mypow(double x, int n){
     return ans;
 }
 
+// or see this alternate solution format same logic 
+double myPow(double x, int n){
 
+        double ans = 1;
 
+        // edge case_1 
+        if(n==0){
+            return 1.0;
+        }
+        // edge case_2 
+        if(x==0){
+            return 0.0;
+        }
+        // edge case_3 
+        if(x==1){
+            return 1.0;
+        }
+        // edge case_4
+        if(x==-1 && n%2 == 0){
+            return 1.0;
+        } 
+        // edge case_5
+        if(x==-1 && n%2 != 0){
+            return -1.0;
+        } 
 
+        //======================= importanat main logic ==================
+        long binForm = n;
 
+        if(n < 0){
+            x = 1/x;
+            binForm = -binForm;
+            
+        }
 
+        while(binForm > 0) {
+            if(binForm % 2==1) {
+                ans *= x;
+            }
+            x *= x;
+            binForm /=2;
+
+        }
+        return ans;
+    }
 
 
 int main(){
