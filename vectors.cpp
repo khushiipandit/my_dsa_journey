@@ -72,6 +72,8 @@ cout<<"hello"<<endl;
 // // at(): to access a value at a particular index 
 // cout<<"the value at 2 index is : "<<vac.at(2)<<endl;//74
 
+
+//============================================================================================
 // // ================= static   vs    dynamic allocation in vactors ==========================
 // vector<int> v={1,2,3}; // static   ----- compile time allocation --- stack memory
 
@@ -92,8 +94,10 @@ cout<<"hello"<<endl;
 // }
 // return ans;
 // when vectors are passed to a function they are passes by value by default so to pass them by referance we use & before the name of the vector
+
 // linear search on vector
-vector<int> vactor_linear={2,6,1,5,6};
+
+vector<int> vactor_linear={6,1,9,3,5};
 int item=1;
 int res = linear_search_vector(vactor_linear, item);
 if(res==-1){

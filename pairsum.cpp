@@ -25,6 +25,7 @@ using namespace std;
 //     }
 //     return ans;
 // }
+
 // // optimized method using two pointer approach 
 
 // vector<int> two_pointer_sum(vector<int>& inp, int target){
@@ -33,7 +34,7 @@ using namespace std;
 //     int end=n-1;
 //     vector<int> ans;
 //     while(st<end){
-//         int sum = inp[st]+inp[end];
+//         int sum = inp[st]+inp[end]; // array is aleady sorted
 //         if(sum>target){
 //             end--;
 //         }if(sum<target){
@@ -46,7 +47,10 @@ using namespace std;
 //     }
 //     return ans;
 // }
+//========================================================================================
 // // majority element : bruite force approach 
+//========================================================================================
+
 // int majorityElement(vector<int>& inp) {
 //        int n= inp.size();
 
@@ -65,7 +69,10 @@ using namespace std;
 //        return -1;
 
 //     }
-// // majority element: more optimized approach using sorting
+//========================================================================================
+//majority element: more optimized approach using sorting
+//========================================================================================
+
 // vector<int> major_el_sorted(vector<int> inp){
 //     int n = arr.size();
 //     // sort using sort function as sort(arr.begin(), arr.end()) arr.begin is the first element and arr.end is the last one
@@ -78,7 +85,7 @@ using namespace std;
 //             count++;
 //         }else{
 //             count=1;
-//             ans = inp[1];
+//             ans = inp[i];
 //         }
 //         if(count>n/2){
 //             return ans;
