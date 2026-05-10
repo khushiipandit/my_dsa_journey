@@ -7,6 +7,7 @@
 using namespace std ; /* std:: cout << "": ko biapass krne ke lie we write this line */
 // function --------------------------------
 //==================================================== leetcode 852 ========================================
+
 // O(logn) time complexity
 int mount_array(vector<int>& arr){
     int n= arr.size();
@@ -37,22 +38,6 @@ int main(){
 // also the first and last element can never be the peak element due to the mountain shape of the array points on graph
 vector<int> arr={1,3,5,4,2};
 cout<<mount_array(arr)<<endl;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return 0;
 }

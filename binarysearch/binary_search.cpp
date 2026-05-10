@@ -1,4 +1,5 @@
 // /* to run the cpp code we first need to compile(using g++ code.cpp ) then execute( using ./a.out ) or  (g++ code.cpp && ./a.out) */
+//     g++ binary_search.cpp && ./a.out
 
 #include <iostream>  /*preprocessor directory knows about cout operation */
 #include <climits>
@@ -9,7 +10,7 @@ using namespace std ; /* std:: cout << "": ko biapass krne ke lie we write this 
 
 // =======================================Iteration approach ===================================================
 
-// two pointer approach (optimized due to O(1)=> space complexity and O(logn)=> time complexity )
+// two pointer approach "iterative "(optimized due to O(1)=> space complexity and O(logn)=> time complexity ) as compared to recursive approach (O(logn) space complexity and O(logn) time complexity)
 
 int binary_search(vector<int>& arr, int target){
     int n= arr.size();
@@ -41,13 +42,13 @@ int binary_search(vector<int>& arr, int target){
 int binary_search_2(vector<int>& arr, int target, int st, int end){
     if(st<=end){
         int mid =st+((end-st)/2); // we're using this formula for minimizing complexity O(logn)
-        if(target>arr[mid]){
+        if(target>arr[mid]) {
            return binary_search_2(arr,target, mid+1, end);
         }
-        if(target<arr[mid]){
+        if(target<arr[mid]) {
             return binary_search_2(arr,target,st,mid-1);
         }
-        if(target==arr[mid]){
+        if(target==arr[mid]) {
             return mid;
         }
     }
