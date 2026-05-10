@@ -8,6 +8,8 @@
 using namespace std ; /* std:: cout << "": ko biapass krne ke lie we write this line */
 // function --------------------------------
 // buy and sale  ==================  O(n) time complexity============================================================
+// think everyday as a selling day and find the best buying price before that day and calculate the profit and keep on updating the max profit
+
 int buy_sell(vector<int>& prices){
     int max_profit = 0;
     int best_buy = prices[0];

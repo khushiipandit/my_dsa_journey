@@ -25,29 +25,28 @@ using namespace std ; /* std:: cout << "": ko biapass krne ke lie we write this 
 // optimized approach---------------------------------
 
 vector<int> productExceptSelf(vector<int>& nums) {
-    int n = nums.size();
-    vector<int> ans= {};
-    vector<int> prifix(n,1);
-    vector<int> suffix(n,1);
+        int n= nums.size();
+        vector<int> ans= {};
+        vector<int> prefix(n,1);
+        vector<int> suffix(n,1);
+        // prefix----------------------------------
 
-    // prifix
-    for(int i=1;i<n;i++){
-        prifix[i]= prifix[i-1] * nums[i-1];
+        for(int i=1; i<n; i++) {
+            prefix[i] = prefix[i-1] * nums[i-1];
+        }
+        // suffix----------------------------------
 
-    }
+        for(int i=n-2; i>=0; i--) {
+            suffix[i] = suffix[i+1] * nums[i+1];
+        }
 
-    // suffix
-    for(int i=n-2;i>=0;i--){
-        suffix[i]= suffix[i+1] * nums[i+1];
-    }
+        // merge the products --------------------
 
-    for(int j=0;j<n;j++){
-        int prod = prifix[j] * suffix[j];
-        ans.push_back(prod);
-    }
-
-
-    return ans;   
+        for(int j=0; j<n; j++) {
+            int prod = prefix[j] * suffix[j];
+            ans.push_back(prod); 
+        }
+        return ans;
 }
 
 // most optimized ( space optimized too )

@@ -21,6 +21,10 @@ int maxArea(vector<int>& height) {
     }
 
 
+
+
+    
+
 // more optimized approach using 2 pointer  ==== O(n) time complexity
  int maxArea_2(vector<int>& height) {
         int max_water=0;
