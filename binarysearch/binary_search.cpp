@@ -8,25 +8,32 @@ using namespace std ; /* std:: cout << "": ko biapass krne ke lie we write this 
 
 
 // =======================================Iteration approach ===================================================
+
 // two pointer approach (optimized due to O(1)=> space complexity and O(logn)=> time complexity )
-// int binary_search(vector<int>& arr, int target){
-//     int n= arr.size();
-//     int st = 0;
-//     int end= n-1;
-//     while(st<=end){
-//         int mid =st+((end-st)/2); // we're using this formula for minimizing complexity O(logn)
-//         if(target>arr[mid]){
-//             st=mid+1;
-//         }
-//         if(target<arr[mid]){
-//             end=mid-1;
-//         }
-//         if(target==arr[mid]){
-//             return mid;
-//         }
-//     }
-//     return -1;
-// }
+
+int binary_search(vector<int>& arr, int target){
+    int n= arr.size();
+    int st = 0;
+    int end= n-1;
+    while(st <= end) {
+
+        int mid =st+((end-st)/2); // we're using this formula for minimizing complexity O(logn)
+
+        if(target>arr[mid]){
+            st=mid+1;
+        }
+        if(target<arr[mid]){
+            end=mid-1;
+        }
+        if(target==arr[mid]){
+            return mid;
+        }
+    }
+    return -1;
+}
+
+
+
 //=====================================Recursive appproach=======================================================
 
 
@@ -52,11 +59,11 @@ int binary_search_2(vector<int>& arr, int target, int st, int end){
 int main(){
 vector<int> arr= {2,3,5,6,8,9,10};
 int n= arr.size();
-int target = 8;
+int target = 39;
 int st=0;
 int end = n-1;
-// cout<<"the target value is at index :"<<binary_search(arr, target)<<endl;;
-cout<<"the target value is at index :"<<binary_search_2(arr,target,st,end)<<endl;;
+cout<<"the target value is at index :"<<binary_search(arr, target)<<endl;;
+// cout<<"the target value is at index :"<<binary_search_2(arr,target,st,end)<<endl;;
 
 
 

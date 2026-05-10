@@ -39,8 +39,8 @@ float* ptr_var = &var;
 float** ptr_ptr_var = &ptr_var;
 // cout<<ptr_ptr_var<<endl;
 // cout<<sizeof(ptr_ptr_var)<<endl;
-// =========================================DEREFERENCES=========================================================
-// Dereference of pointer : it is when the value at the poniter is returned done by" *(&variable)""
+// ========================================= DE-REFERENCES =========================================================
+// Dereference of pointer : it is when the value at the pointer is returned done by" *(&variable) "
 
 // cout<<*(&var)<<endl; // 2 
 // cout<<&var<<endl; // 0x7ffeb6bb99ac
@@ -60,7 +60,7 @@ float** ptr_ptr_var = &ptr_var;
 // change(&value);
 // cout<<"value in main function :"<<value<<endl;
 
-//===================  PASS BY REFERENCE USING ALIAS ===========================================================
+//===================  PASS BY REFERENCE USING ALIAS (Tony stark == ironman) ===========================================================
 
 
 int b= 10;
