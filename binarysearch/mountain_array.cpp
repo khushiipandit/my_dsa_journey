@@ -31,7 +31,7 @@ int mount_array(vector<int>& arr){
 
 
 int main(){
-// mountain array are the array where the elements are incresing to a certain point and decreasing after it 
+// mountain array are the array where the elements are increasing to a certain point and decreasing after it 
 
 // that elemnet at that certain point is known as the peak elemnet of the mountain ARRAY 
 // it is greater than the element to its left and greater than the elements to its right => "a[p-1]<a[p]>a[p+1]"
