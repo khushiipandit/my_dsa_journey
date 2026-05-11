@@ -6,7 +6,7 @@
 #include <algorithm>  // to use functions like min() and max()
 using namespace std ; /* std:: cout << "": ko biapass krne ke lie we write this line */
 // function --------------------------------
-//==================================================== leetcode 540=========================================
+//==================================================== leetcode 540  =========================================
 int single_in_sorted_array(vector<int>& arr){
     int n = arr.size();
     int st=0;
@@ -20,7 +20,7 @@ int single_in_sorted_array(vector<int>& arr){
             return arr[mid];
         }
 
-        if(mid==n-1 && arr[n-1]!=arr[n-1]){
+        if(mid==n-1 && arr[n-1]!=arr[n-2]){
             return arr[mid];
         }
 
